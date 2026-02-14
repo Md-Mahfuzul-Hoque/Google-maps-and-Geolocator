@@ -19,7 +19,17 @@ class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold (
-      appBar: AppBar(title: Text('Google Map'),),
+      appBar: AppBar(
+        title: Center(
+          child: Text('Maps Tracking',
+                style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold
+                ),
+                ),
+        ),
+        backgroundColor: Colors.teal,
+      ),
       body: GoogleMap(
         mapType: MapType.normal,
         trafficEnabled: true,
@@ -147,11 +157,11 @@ class _HomescreenState extends State<Homescreen> {
 
   Future<void> _getCurrentLocation()async{
     _locationServices.handleLocationPermission(onSuccess: ()async{
-      //Then get the location
+
       Position position = await Geolocator.getCurrentPosition(
           locationSettings: LocationSettings()
       );
-      // _currentLocation=position;
+
       setState(() {
         _currentLocation = position;
 

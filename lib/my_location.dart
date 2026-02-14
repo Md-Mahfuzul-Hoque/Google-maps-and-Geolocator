@@ -35,7 +35,7 @@ class _MyLocationState extends State<MyLocation> {
   }
   Future<void> _getCurrentLocation()async{
     _locationServices.handleLocationPermission(onSuccess: ()async{
-      //Then get the location
+
       Position position = await Geolocator.getCurrentPosition(
           locationSettings: LocationSettings()
       );
