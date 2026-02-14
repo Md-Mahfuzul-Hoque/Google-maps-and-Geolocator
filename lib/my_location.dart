@@ -66,30 +66,6 @@ class _MyLocationState extends State<MyLocation> {
     });
   }
 
-  // Future<void> _handleLocationPermission({required VoidCallback onSuccess})async{
-  //   final locationPermission = await Geolocator.checkPermission();
-  //   //check if user permission is given
-  //   if(_isPermissionEnabled(locationPermission)){
-  //     //Check if user gps service enabled
-  //     final bool isGpsEnabled = await Geolocator.isLocationServiceEnabled();
-  //     if(isGpsEnabled){
-  //       onSuccess();
-  //     }else{
-  //       //If not, then open location settings
-  //       await Geolocator.openLocationSettings();
-  //     }
-  //   }else{
-  //     //if not then ask for it
-  //     final LocationPermission permission = await Geolocator.requestPermission();
-  //     if(_isPermissionEnabled(permission)){
-  //       _getCurrentLocation();
-  //     }
-  //   }
-  // }
-  //
-  // bool _isPermissionEnabled(LocationPermission locationPermission){
-  //   return locationPermission == LocationPermission.whileInUse || locationPermission == LocationPermission.always;
-  // }
   @override
   void dispose(){
     _liveLocation?.cancel();

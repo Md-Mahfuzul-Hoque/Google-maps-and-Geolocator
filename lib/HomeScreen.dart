@@ -28,7 +28,7 @@ class _HomescreenState extends State<Homescreen> {
         myLocationEnabled: true,
         myLocationButtonEnabled: true,
         initialCameraPosition: CameraPosition(
-            target: LatLng(22.55243006418666, 91.86319546613036),
+            target: LatLng(23.81541436922018, 90.44143283987697),
             zoom: 17
         ),
         onMapCreated: (GoogleMapController controller){
@@ -42,35 +42,35 @@ class _HomescreenState extends State<Homescreen> {
         },
         markers: <Marker>{
           Marker(
-              markerId: MarkerId('shop'),
-              position: LatLng(22.55243006418666, 91.86319546613036),
+              markerId: MarkerId('Sunnydale School'),
+              position: LatLng(23.824670358139844, 90.4369459803539),
               onTap: (){
-                print('Tapped On my shop');
+                print('Tapped On Sunnydale School');
               },
               visible: true,
               icon: BitmapDescriptor.defaultMarkerWithHue(
                 BitmapDescriptor.hueGreen,
               ),
               infoWindow: InfoWindow(
-                  title: 'Bhai Bhai Grocery Shop',
+                  title: 'Sunnydale School',
                   onTap: (){}
               )
           ),
           Marker(
-              markerId: MarkerId('school'),
-              position: LatLng(22.555195083449732, 91.8631874397397),
+              markerId: MarkerId('Sunflower Restaurant'),
+              position: LatLng(23.825735739862246, 90.43594858035395),
               onTap: (){
-                print('FNW HIGH SCHOOL');
+                print('Tapped On Sunflower Restaurant');
               },
               visible: true,
               infoWindow: InfoWindow(
-                  title: 'FNW HIGH SCHOOL',
+                  title: 'Sunflower Restaurant',
                   onTap: (){}
               )
           ),
           Marker(
               markerId: MarkerId('home'),
-              position: LatLng(22.55334502577644, 91.86225604265928),
+              position: LatLng(23.82368929496159, 90.43956577777863),
               onTap: (){
                 print('Home');
               },
@@ -99,9 +99,9 @@ class _HomescreenState extends State<Homescreen> {
           Polyline(
               polylineId: PolylineId('home-to-shop-to-school'),
               points: [
-                LatLng(22.55334502577644, 91.86225604265928),
-                LatLng(22.55243006418666, 91.86319546613036),
-                LatLng(22.555195083449732, 91.8631874397397),
+                LatLng(23.82368929496159, 90.43956577777863),
+                LatLng(23.81541436922018, 90.44143283987697),
+                LatLng(23.825735739862246, 90.43594858035395),
 
               ],
               color: Colors.red,
@@ -115,7 +115,7 @@ class _HomescreenState extends State<Homescreen> {
         circles: <Circle>{
           Circle(
               circleId: CircleId('Red-zone'),
-              center: LatLng(22.55243006418666, 91.86319546613036),
+              center: LatLng(23.815424184506753, 90.44138992453325),
               radius: 50,
               strokeWidth: 4,
               strokeColor: Colors.red,
@@ -130,10 +130,10 @@ class _HomescreenState extends State<Homescreen> {
           Polygon(
             polygonId: PolygonId('rendom-polygon'),
             points: [
-              LatLng(22.551783526830153, 91.8645104393363),
-              LatLng(22.549616348800903, 91.8645453080535),
-              LatLng(22.54958352658308, 91.86607249081135),
-              LatLng(22.551770212366957, 91.86604533344507)
+              LatLng(23.824670358139844, 90.4369459803539),
+              LatLng(23.82577499788178, 90.43598076686173),
+              LatLng(23.815502706772573, 90.44144356871291),
+              LatLng(23.826918295978384, 90.43313885151801)
             ],
             fillColor: Colors.green.withAlpha(30),
             strokeColor: Colors.green,
@@ -142,16 +142,6 @@ class _HomescreenState extends State<Homescreen> {
           )
         },
       ),
-      floatingActionButton: FloatingActionButton(onPressed: (){
-        _googleMapController.animateCamera(
-          CameraUpdate.newCameraPosition(
-            CameraPosition(
-              target: LatLng(22.55243006418666, 91.86319546613036),
-              zoom: 17,
-            ),
-          ),
-        );
-      },child: Icon(Icons.my_location),),
     );
   }
 
