@@ -132,13 +132,13 @@ class _HomescreenState extends State<Homescreen> {
               fillColor: Colors.red.withAlpha(40),
               consumeTapEvents: true,
               onTap: (){
-                print('on tapped shop-zone');
+                print('on tapped restaurant-zone');
               }
           )
         },
         polygons: <Polygon>{
           Polygon(
-            polygonId: PolygonId('rendom-polygon'),
+            polygonId: PolygonId('random-polygon'),
             points: [
               LatLng(23.824670358139844, 90.4369459803539),
               LatLng(23.82577499788178, 90.43598076686173),
